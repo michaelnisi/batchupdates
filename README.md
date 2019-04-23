@@ -14,7 +14,7 @@ Go take a look at [this](https://michaelnisi.github.io/batchupdates/).
 
 ## Install
 
-Import `BatchUpdates.xcodeproj` into your Xcode Workspace.
+Add `BatchUpdates.xcodeproj` to your Xcode Workspace.
 
 ## License
 

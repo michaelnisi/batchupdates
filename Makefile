@@ -9,7 +9,7 @@ $(P):
 	swift package generate-xcodeproj --xcconfig-overrides ./Sources/ios.xcconfig
 
 docs: $(P)
-	$(JAZZY)
+	$(JAZZY) --author "Michael Nisi" --author_url https://troubled.pro
 
 .PHONY: clean
 clean:
