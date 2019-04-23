@@ -10,7 +10,7 @@ BatchUpdates makes updating UITableView and UICollectionView easier.
 
 ## Example
 
-Adopt the `SectionedDataSource` protocol in your data source.
+Adopt the `SectionedDataSource` protocol with your `UICollectionViewDataSource` or `UITableViewDataSource` object.
 
 ```swift
 import BatchUpdates
@@ -24,19 +24,19 @@ class SomeDataSource: SectionedDataSource {
     case message(String)
   }
 
-  /// The central change handler called when the collection changed.
-  var sectionsChangeHandler: (([[Change<Item>]]) -> Void)?
+  /// The changes block receives changes.
+  var changesBlock: (([[Change<Item>]]) -> Void)?
 
 }
 ```
 
-In some view controller you would install the data source.
+A view controller would install the data source.
 
 ```swift
 let dataSource = SomeDataSource()
 collectionView.dataSource = dataSource
 
-dataSource.sectionsChangeHandler = { [weak self] changes in
+dataSource.changesBlock = { [weak self] changes in
   guard let cv = self?.collectionView else {
     return
   }
@@ -45,12 +45,17 @@ dataSource.sectionsChangeHandler = { [weak self] changes in
 }
 ```
 
-Your data source `SomeDataSource` would expose an API that modifies data in your domain 
-model and transform that data into data source items of type `SomeDataSource.Item`. 
-When the data changes, the data source submits the `sectionsChangeHandler` on the 
-main queue suggesting the changes—without updating its sections, that’s the view 
-controller’s job, which can commit the changes in that block. `SectionedDataSource` 
-performs batch updates for `.collection` and `.table` views.
+Your data source `SomeDataSource` would implement an API for communicating with 
+your domain model and services, providing their data as sections of data source
+items enumerated by `SomeDataSource.Item`. 
+
+When the data source has received new data, it diffs old and new sections with its
+`static func makeChanges(old: [Array<Item>], new: [Array<Item>]) -> [[Change<Item>]]`
+function and submits `changesBlock` on the main queue, suggesting the changes without 
+updating its internal state. The sections data structure remains untouched until the view 
+controller commits the changes. This is when `SectionedDataSource` performs batch updates,
+updating the data model inside the updates block of `performBatchUpdates(_:completion:)` 
+on `UICollectionView` or `UITableView`.
 
 ## Documentation
 
