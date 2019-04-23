@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SectionedDataSource Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/SectionedDataSource" class="dashAnchor"></a>
+    <a title="SectionedDataSource Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (35% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SectionedDataSource Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Change.html">Change</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SectionDataSourceView.html">SectionDataSourceView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/SectionedDataSource.html">SectionedDataSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Delete.html">Delete</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Insert.html">Insert</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Move.html">Move</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Replace.html">Replace</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SectionedDataSource</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SectionedDataSource</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A sectioned data source for table and collection views.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP4ItemQa"></a>
+                    <a name="//apple_ref/swift/Alias/Item" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The item type provided by this data source.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">associatedtype</span> <span class="kt">Item</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP8sectionsSaySay4ItemQzGGvp"></a>
+                    <a name="//apple_ref/swift/Property/sections" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP8sectionsSaySay4ItemQzGGvp">sections</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sections</span><span class="p">:</span> <span class="p">[</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="o">&gt;</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP7isEmptySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isEmpty" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP7isEmptySbvp">isEmpty</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns <code>true</code> if the underlying collection contains no items.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP6itemAt9indexPath4ItemQzSg10Foundation05IndexI0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/itemAt(indexPath:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP6itemAt9indexPath4ItemQzSg10Foundation05IndexI0V_tF">itemAt(indexPath:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the item at <code>indexPath</code>.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">itemAt</span><span class="p">(</span><span class="nv">indexPath</span><span class="p">:</span> <span class="kt">IndexPath</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP6commit_14performingWith15completionBlockySaySayAA6ChangeOy4ItemQzGGG_AA07SectiondE4ViewOySbcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/commit(_:performingWith:completionBlock:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP6commit_14performingWith15completionBlockySaySayAA6ChangeOy4ItemQzGGG_AA07SectiondE4ViewOySbcSgtF">commit(_:performingWith:completionBlock:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Commit changes <code>batch</code>, performing batch updates with <code>view</code>.</p>
+
+<p>Reloading sections and rows are still to crack, leaving <strong>section titles
+not fully supported</strong> yet.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">commit</span><span class="p">(</span><span class="n">_</span> <span class="nv">batch</span><span class="p">:</span> <span class="p">[[</span><span class="kt"><a href="../Enums/Change.html">Change</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="o">&gt;</span><span class="p">]],</span> <span class="n">performingWith</span> <span class="nv">view</span><span class="p">:</span> <span class="kt"><a href="../Enums/SectionDataSourceView.html">SectionDataSourceView</a></span><span class="p">,</span> <span class="nv">completionBlock</span><span class="p">:</span> <span class="p">((</span><span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>batch</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Arrays of changes per section.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>view</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The view performing the batch updates.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionBlock</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block to execute when all operations are finished.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:12BatchUpdates19SectionedDataSourceP11makeChanges3old3newSaySayAA6ChangeOy4ItemQzGGGSaySayAJGG_AOtFZ"></a>
+                    <a name="//apple_ref/swift/Method/makeChanges(old:new:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:12BatchUpdates19SectionedDataSourceP11makeChanges3old3newSaySayAA6ChangeOy4ItemQzGGGSaySayAJGG_AOtFZ">makeChanges(old:new:)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns required changes for arriving at the <code>new</code> sections, coming from
+the <code>old</code> sections.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">makeChanges</span><span class="p">(</span><span class="nv">old</span><span class="p">:</span> <span class="p">[</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="o">&gt;</span><span class="p">],</span> <span class="nv">new</span><span class="p">:</span> <span class="p">[</span><span class="kt">Array</span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="o">&gt;</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="p">[[</span><span class="kt"><a href="../Enums/Change.html">Change</a></span><span class="o">&lt;</span><span class="kt"><a href="../Protocols/SectionedDataSource.html#/s:12BatchUpdates19SectionedDataSourceP4ItemQa">Item</a></span><span class="o">&gt;</span><span class="p">]]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>old</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The current sections of the collection.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>new</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new sections of the collection we want to arrive at.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The required changes.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2019-04-23)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
