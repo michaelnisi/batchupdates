@@ -153,10 +153,10 @@ extension SectionedDataSource {
         IndexSet(sectionsToInsert.sorted())
       )
 
-      os_log("deleting sections: %@", log: log, type: .debug, sd as CVarArg)
-      os_log("deleting rows: %@", log: log, type: .debug, rowsToDelete as CVarArg)
-      os_log("inserting sections: %@", log: log, type: .debug, si as CVarArg)
-      os_log("inserting rows: %@", log: log, type: .debug, rowsToInsert as CVarArg)
+      os_log("deleting sections: %@", log: log, type: .info, sd as CVarArg)
+      os_log("deleting rows: %@", log: log, type: .info, rowsToDelete as CVarArg)
+      os_log("inserting sections: %@", log: log, type: .info, si as CVarArg)
+      os_log("inserting rows: %@", log: log, type: .info, rowsToInsert as CVarArg)
 
       view.update(
         sectionsToDelete: sd,
