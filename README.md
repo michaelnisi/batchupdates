@@ -63,7 +63,7 @@ Go take a look at [this](https://michaelnisi.github.io/batchupdates/).
 
 ## Install
 
-Add `BatchUpdates.xcodeproj` to your Xcode Workspace.
+📦 Add `https://github.com/michaelnisi/batchupdates` to your package dependencies.
 
 ## License
 
